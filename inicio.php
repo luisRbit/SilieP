@@ -166,7 +166,7 @@ button:hover {
         <label>Contraseña:</label>
         <input type="password" name="password" required>
         <br>
-        <button type="submit" href="27.0.0.1:5500/pruebas/otro/index.html">Iniciar Sesión</button>
+        <button type="submit" href="index.html">Iniciar Sesión</button>
     </form>
     </div>
     <div class="paputo"><p>¿No tienes una cuenta? <div class="tinki"><a href="registro.php">Regístrate aquí</a></div></p></div>

@@ -6,6 +6,7 @@
     <title>Coopnazonaf</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+   
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,6 +26,199 @@
             font-size: 14px;
             
         }
+
+        h1 {
+            color: #1a1a1a;
+        }
+
+
+
+
+
+        .logito {
+    max-width: 200px;
+    height: auto;
+}
+
+.logito img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+/* Carousel responsivo */
+.carousel-item {
+    height: auto;
+    min-height: 300px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cards responsivas */
+.card {
+    height: auto;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer responsivo */
+.foooter {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    .carousel-item {
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logito {
+        max-width: 150px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .carousel-item {
+        min-height: 200px;
+    }
+
+    .card {
+        margin: 10px 5px;
+    }
+
+    .footer div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer div[style*="max-width"] {
+        margin: 10px 0;
+    }
+
+    input[type="email"] {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ajustes de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-item {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Ajustes de alto contraste */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .card {
+        background: #2a2a2a;
+    }
+
+    .card-title {
+        color: #4CAF50;
+    }
+
+    .card-text {
+        color: #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         nav ul {
             list-style: none;
             margin: 10px;
