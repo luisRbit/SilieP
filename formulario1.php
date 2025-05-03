@@ -161,7 +161,7 @@ $conexion->close();
         <button type="submit" class="btn btn-green w-100">Enviar</button>
     </form>
     <div class="login-link">
-        <p><a href="http://127.0.0.1:5500/pruebas/otro/paginaPrincipal.html">Home</a></p>
+        <p><a href="http://127.0.0.1:5500/pruebas/otro/index.html">Home</a></p>
     </div>
 
 </div>
