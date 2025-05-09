@@ -10,20 +10,24 @@
 </head>
 <body>
 
-    <div class="loader-container">
-        <img src="https://www.coopnazonaf.com/images/logonuevo2.png" alt="Coopnazonaf Logo" height="100" class="loader">
-    </div>
+    
 
    
-    <header class="zindex" >
-        
+    <header class="zindex">
+      <div class="menu-overlay" id="menuOverlay"></div>
         <a href="index.html">
             <div class="logito">
                 <img src="https://www.coopnazonaf.com/images/logonuevo2.png" alt="Coopnazonaf Logo" height="60">
             </div>
         </a>
         
-        <nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav id="nav">
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="Nosotros.html">Nosotros</a></li>
@@ -55,7 +59,7 @@
       <div class="icon">📝</div>
       <h2>FORMULARIOS Y <strong>SOLICITUDES</strong></h2>
       <p>Puedes descargar tus solicitudes por esta vía.</p>
-      <p><a href="fhttp://localhost/php.rrichy/pruebas/otro/formulario1.php">Haz Clic Aquí ▸</a></p>
+      <p><a href="formulario1.php">Haz Clic Aquí ▸</a></p>
     </div>
 
     <div class="info-box box3">
@@ -105,6 +109,8 @@
       </div>
     </div>
     
+
+    
     <div class="col-md-4 mb-4">
       <div class="card4">
         <h2>04</h2>
@@ -124,6 +130,13 @@
 </div>
 <!--------------------------------------------------------segunda seccion()-->
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!--------------------------------------------------------segunda seccion()-->
     
@@ -164,7 +177,31 @@
     </footer>
 </div>
 
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('nav').classList.toggle('active');
+  });
 
+  // Cerrar menú al hacer clic en un enlace
+  document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+          document.getElementById('menuToggle').classList.remove('active');
+          document.getElementById('nav').classList.remove('active');
+      });
+  });
+</script>
+
+
+<script>
+
+
+
+
+  
+</script>
+</body>
+</html>
 
 
 </body>

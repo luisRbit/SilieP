@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // In the PHP section, update the header location
         if (password_verify($password, $hashed_password)) {
             $_SESSION["user"] = $email;
-            header("Location: http://127.0.0.1:5500/pruebas/otro/paginaPrincipal.html");
+            header("Location: index.html");
             exit();
         } else {
             echo "<script>alert('¡Contraseña incorrecta!');</script>";

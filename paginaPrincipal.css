@@ -13,6 +13,18 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+header img {
+    position: relative;
+    left:-200px;
+}
+
+@media (max-width: 768px) {
+    header img {
+        position: relative;
+        left: 0;
+    }
+}
 .contact-info {
     font-size: 14px;
     
@@ -84,35 +96,235 @@ footer {
 }
 
 /*------------------------------------------------------------------------------------------------*/
-.loader-container {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 9999;
-animation: fadeOut 1s ease 1s forwards;
+
+
+
+
+/*================================================================================================*/
+
+@media screen and (max-width: 1200px) {
+    .banner {
+        padding: 200px;
+    }
+    
+    .info-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .info-box {
+        flex: 0 0 50%;
+    }
 }
 
-.loader {
-animation: pulse 1s ease infinite;
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .banner {
+        padding: 150px 20px;
+    }
+    
+    .banner h2 {
+        font-size: 28px;
+    }
+    
+    .banner p {
+        font-size: 16px;
+    }
+    
+    .info-section {
+        flex-direction: column;
+    }
+    
+    .info-box {
+        flex: 0 0 100%;
+        min-width: auto;
+    }
+    
+    .btn {
+        padding: 15px 30px;
+        font-size: 16px;
+        width: 80%;
+        max-width: 300px;
+    }
 }
 
-@keyframes fadeOut {
-to {
-    opacity: 0;
-    visibility: hidden;
-}
+@media screen and (max-width: 480px) {
+    .contact-info {
+        font-size: 12px;
+    }
+    
+    .banner {
+        padding: 100px 15px;
+    }
+    
+    .banner h2 {
+        font-size: 24px;
+    }
+    
+    .banner p {
+        font-size: 14px;
+    }
+    
+    .info-box {
+        padding: 20px;
+    }
+    
+    .info-box h2 {
+        font-size: 18px;
+    }
+    
+    .info-box p {
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
 }
 
-@keyframes pulse {
-0% { transform: scale(1); }
-50% { transform: scale(1.1); }
-100% { transform: scale(1); }
+/* Ajustes para imágenes responsivas */
+
+/* Ajustes para el loader en dispositivos móviles */
+
+/*===================================*/
+.menu-toggle {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #28a745;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        padding: 80px 20px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Animación del menú hamburguesa */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        padding: 80px 20px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    /* Aseguramos que el contenido del menú esté por encima */
+    nav ul {
+        position: relative;
+        z-index: 1002;
+    }
+
+    /* Agregamos un fondo oscuro cuando el menú está activo */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
 }
 
 /*------------------------------------------------------------------------------------------------*/
@@ -123,14 +335,12 @@ to {
     left: 49px;
     position: absolute;
     font-size: 30px;
-    animation: slideInRight 1s ease 1.5s forwards;
+    animation: slideInRight 0s ease 1s forwards;
     opacity: 0;
     padding: 20px;
-  
     border-radius: 15px;
-    
-   
     transform: translateX(100px);
+    -webkit-animation: slideInRight 0s ease 1s forwards;
 }
 
 .bienvenida2 {
@@ -139,10 +349,11 @@ to {
     left: 49px;
     position: absolute;
     font-size: 20px;
-    animation: slideInLeft 1s ease 2s forwards;
+    animation: slideInLeft 1s ease 1s forwards;
     opacity: 0;
     padding: 15px 25px;
     transform: translateX(-100px);
+    -webkit-animation: slideInLeft 1s ease 1s forwards;
 }
 
 .bienvenida3 {
@@ -150,13 +361,32 @@ to {
     top: 80px;
     left: -9px;
     position: absolute;
-    font-size: 80px;
-    animation: fadeInDown 1s ease 3s forwards;
+    font-size: clamp(40px, 8vw, 80px);
+    animation: fadeInDown 1s ease 1s forwards;
     opacity: 0;
     text-shadow: 2px 2px 4px rgba(120, 117, 117, 0.2);
     letter-spacing: 2px;
     font-weight: 800;
     transform: translateY(-50px);
+    -webkit-animation: fadeInDown 1s ease 1s forwards;
+}
+
+@media screen and (max-width: 768px) {
+    .bienvenida3 {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: clamp(30px, 6vw, 60px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bienvenida3 {
+        top: 40px;
+        font-size: clamp(24px, 5vw, 40px);
+        letter-spacing: 1px;
+    }
 }
 
 @keyframes slideInRight {
@@ -276,7 +506,7 @@ padding: 40px;
 border: 5px solid #1f7a37e1;
 background-color: #f9f9f9;
 box-shadow: 0 2px 4px rgba(45, 150, 7, 0.989);
-margin: 20px;
+margin: 0px;
 position: relative;
 transition: all 0.3s ease;
 height: 100%;
@@ -290,7 +520,7 @@ padding: 40px;
 border: 5px solid #1f7a37e1;
 background-color: #f9f9f9;
 box-shadow: 0 2px 4px rgba(45, 150, 7, 0.989);
-margin: 20px;
+margin: 0px;
 position: relative;
 transition: all 0.3s ease;
 height: 100%;
@@ -304,7 +534,7 @@ padding: 40px;
 border: 5px solid #1f7a37e1;
 background-color: #f9f9f9;
 box-shadow: 0 2px 4px rgba(45, 150, 7, 0.989);
-margin: 20px;
+margin: 0px;
 position: relative;
 transition: all 0.3s ease;
 height: 100%;
