@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coopnazonaf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 30px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-info {
+            font-size: 14px;
+            
+        }
+
+        h1 {
+            color: #1a1a1a;
+        }
+
+
+
+
+
+        .logito {
+    max-width: 200px;
+    height: auto;
+}
+
+.logito img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+/* Carousel responsivo */
+.carousel-item {
+    height: auto;
+    min-height: 300px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cards responsivas */
+.card {
+    height: auto;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer responsivo */
+.foooter {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    .carousel-item {
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logito {
+        max-width: 150px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .carousel-item {
+        min-height: 200px;
+    }
+
+    .card {
+        margin: 10px 5px;
+    }
+
+    .footer div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer div[style*="max-width"] {
+        margin: 10px 0;
+    }
+
+    input[type="email"] {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ajustes de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-item {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Ajustes de alto contraste */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .card {
+        background: #2a2a2a;
+    }
+
+    .card-title {
+        color: #4CAF50;
+    }
+
+    .card-text {
+        color: #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        nav ul {
+            list-style: none;
+            margin: 10px;
+            display: flex;
+            padding: 10px 10px;
+            font-size: large;
+
+
+
+            
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(92, 37, 37);
+            font-weight: bold;
+         
+           
+            
+        }
+
+         nav ul li :hover {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px; 
+            border-radius: 10px;
+            transition: background-color 1.0s ease;
+            animation-delay: 2s;
+        }
+        .active {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            
+            
+        }
+        .banner {
+            background: url('./comunity.jpg') no-repeat center center/cover;
+            background-attachment: fixed; 
+            text-align: center;
+            padding: 300px;
+            color: black;
+            
+           
+        
+        }
+        .banner h2 {
+            font-size: 36px;
+        }
+        .banner p {
+            font-size: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .apk {
+            color: #f4f4f4;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50; 
+            border-radius: 5px;
+        }
+        
+        .apk a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .apk:hover {
+            background-color: #5a812f;
+        }
+        
+        .apk:hover a {
+            color: rgb(255, 255, 255);
+        }
+           
+
+/*------------------------------------------------------------------------------------------------*/
+        .loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        animation: fadeOut 1s ease 1s forwards;
+    }
+
+    .loader {
+        animation: pulse 1s ease infinite;
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+/*------------------------------------------------------------------------------------------------*/
+
+      
+/*------------------------------------------------------------------------------------------------*/
+/*primera seccion(info)----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------productos y servicios-------------------------------------------------*/
+
+    
+  
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+            
+
+        
+        
+        .foooter {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+
+
+
+   
+   
+    
+<!--------------------------------------------------------primera seccion(info)-->
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-title {
+      color: #004d40;
+    }
+    .card-text {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="zindex" >
+        
+    <a href="http://127.0.0.1:5500/pruebas/otro/paginaPrincipal.html">
+        <div class="logito">
+            <img src="https://www.coopnazonaf.com/images/logonuevo2.png" alt="Coopnazonaf Logo" height="60">
+        </div>
+    </a>
+    
+    <nav>
+      <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="Nosotros.html">Nosotros</a></li>
+          <li><a href="productos-Servicios.html">Productos y Servicios</a></li>
+          <li><a href="Noticias.html">Noticias</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+      </ul>
+  </nav>
+</header>
+
+
+
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.coopnazonaf.com/images/foto_prestamo.jpg" class="d-block w-100" alt="Préstamo de Emergencia">
+            <div class="carousel-caption text-start">
+              <h3>Aumento del Préstamo de Emergencia</h3>
+              <p>El monto que puedes solicitar pasó de 10 mil a 15 mil pesos.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.coopnazonaf.com/images/DSC_1140_2.jpg" class="d-block w-100" alt="Liderazgo Transformacional">
+            <div class="carousel-caption text-start">
+              <h3>Liderazgo de Colaboradores</h3>
+              <p>Primer Diplomado de Liderazgo Transformacional.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.coopnazonaf.com/images/2022/06/08/DSC08230.jpg" class="d-block w-100" alt="Crecimiento 2021">
+            <div class="carousel-caption text-start">
+              <h3>Crecimiento Significativo</h3>
+              <p>Activos crecieron un 22.53% durante 2021.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      
+      <style>
+        .carousel {
+          margin-bottom: 40px;
+        }
+      
+        .carousel-item {
+          height: 500px;
+        }
+      
+        .carousel-item img {
+          object-fit: cover;
+          height: 100%;
+        }
+      
+        .carousel-caption {
+          background: rgba(0, 0, 0, 0.6);
+          padding: 1.5rem;
+          border-radius: 1rem;
+          bottom: 20px;
+        }
+      
+        .carousel-caption h3,
+        .carousel-caption p {
+          color: #fff;
+          margin: 0;
+        }
+
+
+        .card {
+        height: 500px;
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(40, 167, 69, 0.2);
+    }
+
+    .card img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        height: calc(100% - 250px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        color: #28a745;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        flex: 0 0 auto;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+        margin-bottom: 0.75rem;
+        flex: 0 0 auto;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #555;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        flex: 1 1 auto;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            height: 450px;
+        }
+        
+        .card img {
+            height: 200px;
+        }
+        
+        .card-body {
+            height: calc(100% - 200px);
+        }
+    }
+
+
+
+
+
+
+
+
+      </style>
+
+
+
+
+
+
+
+
+
+  <div class="container py-5">
+    <h1 class="mb-5 text-center">Últimas Noticias - Coopnazaf</h1>
+    <div class="row g-4">
+
+      <!-- Noticia 1 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/foto_prestamo.jpg" class="card-img-top" alt="Prestamo de Emergencia">
+          <div class="card-body">
+            <h5 class="card-title">Coopnazaf está de aniversario y anuncia aumento del Préstamo de Emergencia</h5>
+            <p class="text-muted small">Martes, 05 Septiembre 2022</p>
+            <p class="card-text">El monto que puedes solicitar pasó de 10 mil a 15 mil pesos y dependiendo de la escala salarial del asociado, puede llegar hasta 30 mil.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 2 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/DSC_1140_2.jpg" class="card-img-top" alt="Liderazgo Transformacional">
+          <div class="card-body">
+            <h5 class="card-title">Coopnazaf busca potenciar el liderazgo de sus colaboradores</h5>
+            <p class="text-muted small">Martes, 30 Agosto 2022</p>
+            <p class="card-text">El Primer Diplomado de Liderazgo Transformacional está dirigido a todo el personal, con enfoque en el ser humano y sus emociones.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 3 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2022/06/08/DSC08230.jpg" class="card-img-top" alt="Crecimiento 2021">
+          <div class="card-body">
+            <h5 class="card-title">Activos de Coopnazaf crecieron un 22.53% durante 2021</h5>
+            <p class="text-muted small">Miércoles, 08 Junio 2022</p>
+            <p class="card-text">Los activos totales superan los 1,700 millones de pesos y se distribuirán más de 99 millones en excedentes entre los socios.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 4 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2022/05/25/Nuevos.png" class="card-img-top" alt="Modificación Estatutos">
+          <div class="card-body">
+            <h5 class="card-title">Modificación a estatutos permite a los socios hacer inversiones y aumentar su capital</h5>
+            <p class="text-muted small">Miércoles, 25 Mayo 2022</p>
+            <p class="card-text">Los estatutos fueron actualizados para permitir inversiones en aportaciones y admisión de nuevos productos como el Instituto de Desarrollo y Crédito Cooperativo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 5 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2024/Mesa_principal_de_los_trabajos_de_asamblea.jpg" class="card-img-top" alt="Prestamo de Emergencia">
+          <div class="card-body">
+            <h5 class="card-title">Coopnazonaf distribuye entre sus socios más de 142 millones de pesos como excedente</h5>
+            <p class="text-muted small">Martes, 05 Septiembre 2022</p>
+            <p class="card-text">Al dar a conocer los resultados del ejercicio financiero de Coopnazonaf del período fiscal 2023, durante la XI Asamblea General Ordinaria de Delegados, David Gerónimo, presidente del Consejo de Administración, manifestó que la cartera de ahorros tuvo un gran crecimiento, sobrepasando los 1,835 millones.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 6 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2023/LogosAPP/LogoCoop.png" class="card-img-top" alt="Liderazgo Transformacional">
+          <div class="card-body">
+            <h5 class="card-title">Descarga Nuestra APP</h5>
+            <p class="text-muted small"></p>
+            <p class="card-text"> <div class="apk"><a href="https://play.google.com/store/apps/details?id=com.coopnazonaf&hl=es&pli=1">Descargarla aqui</a></div></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 7 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2021/10/18/685036E0-CBB4-4726-AFA8-E8744EB0656D-1.png" class="card-img-top" alt="Crecimiento 2021">
+          <div class="card-body">
+            <h5 class="card-title">Coopnazonaf reduce las tasas de interés de sus préstamos</h5>
+            <p class="text-muted small">Lunes, 18 October 2021</p>
+            <p class="card-text">Desde el 18 de octubre de 2021 y hasta febrero de 2022, el préstamo Hipotecario baja de un 12 a un 10.08 por ciento anual, el préstamo de Hasta una vez 
+                los ahorros, que anualmente paga un 12 por ciento de interés, reduce casi dos puntos porcentuales colocándose a un 10.08 por ciento, el de Hasta dos veces los Ahorros de 16 por ciento pasa a 15 por ciento y el de Hasta tres veces los ahorros,
+                 el préstamo que tuvo mayor demanda durante el año 2020 y que paga una tasa de interés anual de 18 por ciento; tendrá una nueva tasa anual de 16.92 por ciento.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noticia 8 -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://www.coopnazonaf.com/images/2021/05/25/Nuevos.png" class="card-img-top" alt="Modificación Estatutos">
+          <div class="card-body">
+            <h5 class="card-title">Gerente general de COOPNAZONAF aboga por un relanzamiento y modernización de las cooperativas</h5>
+            <p class="text-muted small">Martes, 25 May 2021</p>
+            <p class="card-text">“Las cooperativas tienen que ser relanzadas porque la legislación cooperativa está atrasada”, manifestó Fernández al ser entrevistado por Edith Febles y Germán Marte en el matutino El Día, al tiempo que valoró los aportes del sector cooperativo al Producto Interno Bruto.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!--------------------------------------------------------primera segunda seccion(info)-->
+
+<!--------------------------------------------------------segunda seccion()-->
+
+
+<!--------------------------------------------------------segunda seccion()-->
+    
+    
+    <div class="foooter" >
+
+    <footer style="background-color: #1a1a1a; color: white; padding: 20px 0; text-align: center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+            <div style="max-width: 300px;">
+                <h3>Nuestra Misión</h3>
+                <p>Contribuir al mejoramiento de la calidad de vida de nuestros socios, con el compromiso de promover el trabajo, el hábito del ahorro y la inversión inteligente, ofreciendo servicios efectivos y eficientes.</p>
+            </div>
+            
+              <div class="imgdefoter"><img src="https://coopnazonaf.com/images/2021/09/07/uaf00194mt8u.png" alt="Sujeto Obligado Registrado" style="max-width: 150px;"></a></div>
+            
+            <div>
+                <h3>Accesos</h3>
+                <p><a href="#" style="color: white; text-decoration: none;">Listado de Suplidores</a></p>
+            </div>
+            <div>
+                <h3>Inscríbete En Nuestra Lista De Correos</h3>
+                <form>
+                    <input type="email" placeholder="email " style="padding: 5px; width: 200px;">
+                    <button type="submit" style="background-color: #4CAF50; color: white; padding: 5px 10px; border: none; cursor: pointer;">Enviar</button>
+                </form>
+                <p>
+                    <a href="#" style="color: white; margin: 0 5px;">&#x1F426;</a>
+                    <a href="#" style="color: white; margin: 0 5px;">&#x1F310;</a>
+                    <a href="#" style="color: white; margin: 0 5px;">&#x1F517;</a>
+                </p>
+            </div>
+        </div>
+        <div style="margin-top: 20px; border-top: 1px solid #444; padding-top: 10px;">
+          <p>Copyright 2025 &copy; Coopnazonaf | Website hecho por <a href="#" style="color: #4CAF50; text-decoration: none;">Ricardo and Ruffina</a></p>
+      </div>
+    </footer>
+</div>
+
+
+</body>
+</html>
